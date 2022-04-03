@@ -1,0 +1,5 @@
+Установка: sudo apt install sqlite3
+Узнать версию: sqlite3
+Выход:.quit
+Создать базу testDB: sqlite3 testDB.db
+Активировать базу. После создания её не видно: .databases
