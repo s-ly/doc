@@ -1,3 +1,5 @@
+SQLite
+
 Установка: sudo apt install sqlite3
 Узнать версию: sqlite3
 Выход:.quit
