@@ -10,7 +10,7 @@ Docker version:
 `sudo docker --version`
 
 Проверка сервера:  
-`docker version`
+`sudo docker version`
 
 Спиок образов:  
 `docker image ls`
