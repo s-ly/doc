@@ -11,3 +11,6 @@ git branch -a
 
 # Визуальное отображение графа предков для всех веток
 git show-branch
+
+# создания пустого файла .gitignore
+touch .gitignore
