@@ -1,33 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="Makefile" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1707916051" ts_lastsave="1707916497">
-    <rich_text scale="h1">Пример создания и связывания статической библиотеки.</rich_text>
-    <rich_text>
-
-
-
-</rich_text>
-    <rich_text scale="h2">Описание:</rich_text>
-    <rich_text>
-</rich_text>
-    <rich_text weight="heavy">stat_lib</rich_text>
-    <rich_text> -&gt; вызывает </rich_text>
-    <rich_text weight="heavy">stat</rich_text>
-    <rich_text>.  
-</rich_text>
-    <rich_text weight="heavy">stat</rich_text>
-    <rich_text> -&gt; компилируем func.c в func.o (в объектный файл).  
-</rich_text>
-    <rich_text weight="heavy">stat_lib</rich_text>
-    <rich_text> -&gt; создаём статическую библиотеку libfunc_stat.a из func.o.  
-</rich_text>
-    <rich_text weight="heavy">obj_stat</rich_text>
-    <rich_text> -&gt; связывает app_stat.o с библиотекой libfunc_stat.a для создания исполняемого файла app_stat.
+  <node name="Makefile" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1707916051" ts_lastsave="1707939932">
+    <node name="Связывания статической библиотеки" unique_id="2" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1707924398" ts_lastsave="1707924425">
+      <rich_text scale="h1">Пример создания и связывания статической библиотеки.</rich_text>
+      <rich_text>
 
 </rich_text>
-    <rich_text scale="h2">Дополнительно:</rich_text>
-    <rich_text>
+      <rich_text justification="left"></rich_text>
+      <rich_text>
+
+</rich_text>
+      <rich_text scale="h2">Описание:</rich_text>
+      <rich_text>
+</rich_text>
+      <rich_text weight="heavy">stat_lib</rich_text>
+      <rich_text> -&gt; вызывает </rich_text>
+      <rich_text weight="heavy">stat</rich_text>
+      <rich_text>.  
+</rich_text>
+      <rich_text weight="heavy">stat</rich_text>
+      <rich_text> -&gt; компилируем func.c в func.o (в объектный файл).  
+</rich_text>
+      <rich_text weight="heavy">stat_lib</rich_text>
+      <rich_text> -&gt; создаём статическую библиотеку libfunc_stat.a из func.o.  
+</rich_text>
+      <rich_text weight="heavy">obj_stat</rich_text>
+      <rich_text> -&gt; связывает app_stat.o с библиотекой libfunc_stat.a для создания исполняемого файла app_stat.
+
+</rich_text>
+      <rich_text scale="h2">Дополнительно:</rich_text>
+      <rich_text>
 Автоматическое правило: make имеет встроенные правила для некоторых типов файлов. Для файлов с расширением .o, make знает, что они должны быть скомпилированы из соответствующих файлов с расширением .c с помощью компилятора C. Таким образом, если app_stat.c существует и app_stat.o не найден или устарел, make автоматически выполнит команду для его создания.
 
 Имя файла статической библиотеки C не обязательно должно начинаться с «lib». Однако принято добавлять к имени префикс «lib», особенно при использовании этой -l опции во время связывания. Это связано с тем, что компоновщик ожидает, что библиотека будет названа в форме lib{name}.a для статических библиотек и lib{name}.soдля общих библиотек. Когда вы используете эту -l опцию с компоновщиком, он автоматически добавляет lib префикс и соответствующий суффикс (.a для статических библиотек) при поиске библиотеки. Например, если вы напишете -lfoo, компоновщик будет искать файл с именем libfoo.a. Если вы хотите использовать библиотеку, которая не соответствует lib соглашению о префиксах, вам придется указать полный путь к файлу библиотеки при связывании, не используя -l опцию.
@@ -36,25 +39,31 @@
 Флаг -lfunc_stat для связывания с libfunc_stat.a библиотекой.
 
 </rich_text>
-    <rich_text scale="h2">Файлы проекта:</rich_text>
-    <rich_text>
+      <rich_text scale="h2">Файлы проекта:</rich_text>
+      <rich_text>
 
 </rich_text>
-    <rich_text scale="h3">app_stat.c:</rich_text>
-    <rich_text>
-
+      <rich_text scale="h3">app_stat.c:</rich_text>
+      <rich_text>
+</rich_text>
+      <rich_text justification="left"></rich_text>
+      <rich_text>
 
 </rich_text>
-    <rich_text scale="h3">func.c:</rich_text>
-    <rich_text>
-
+      <rich_text scale="h3">func.c:</rich_text>
+      <rich_text>
+</rich_text>
+      <rich_text justification="left"></rich_text>
+      <rich_text>
 
 </rich_text>
-    <rich_text scale="h3">func.h:</rich_text>
-    <rich_text>
-
+      <rich_text scale="h3">func.h:</rich_text>
+      <rich_text>
 </rich_text>
-    <codebox char_offset="54" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="makefile" highlight_brackets="1" show_line_numbers="1">GCC = gcc -Wall -Werror -Wextra -std=c11
+      <rich_text justification="left"></rich_text>
+      <rich_text>
+</rich_text>
+      <codebox char_offset="54" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="makefile" highlight_brackets="1" show_line_numbers="1">GCC = gcc -Wall -Werror -Wextra -std=c11
 AR = ar rcs
 
 all: rebuild
@@ -76,7 +85,7 @@ stat: func.c
 
 stat_lib: stat
 	$(AR) libfunc_stat.a func.o</codebox>
-    <codebox char_offset="1649" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="c" highlight_brackets="1" show_line_numbers="0">#include&lt;stdio.h&gt;
+      <codebox char_offset="1649" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="c" highlight_brackets="1" show_line_numbers="0">#include&lt;stdio.h&gt;
 #include"func.h"
 
 int main() {
@@ -84,13 +93,96 @@ int main() {
     my_print();
     return 0;
 }</codebox>
-    <codebox char_offset="1660" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="c" highlight_brackets="1" show_line_numbers="0">#include"func.h"
+      <codebox char_offset="1660" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="c" highlight_brackets="1" show_line_numbers="0">#include"func.h"
 
 void my_print(){
     printf("Hello my func\n");
 }</codebox>
-    <codebox char_offset="1671" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="c" highlight_brackets="1" show_line_numbers="0">#include&lt;stdio.h&gt;
+      <codebox char_offset="1671" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="c" highlight_brackets="1" show_line_numbers="0">#include&lt;stdio.h&gt;
 
 void my_print();</codebox>
+    </node>
+    <node name="Связывание нескольких файлов" unique_id="3" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1707924474" ts_lastsave="1707924724">
+      <rich_text scale="h1">Связывание нескольких файлов</rich_text>
+      <rich_text>
+
+
+</rich_text>
+      <rich_text scale="h2">Файлы проекта:</rich_text>
+      <rich_text>
+
+</rich_text>
+      <rich_text scale="h3">sum.c</rich_text>
+      <rich_text>
+
+
+</rich_text>
+      <rich_text scale="h3">sum.h
+
+
+my_sum.c
+
+
+my_sum.h
+
+
+test_lib.c</rich_text>
+      <rich_text>
+
+</rich_text>
+      <codebox char_offset="29" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="makefile" highlight_brackets="1" show_line_numbers="0">GCC = gcc -Wall -Werror -Wextra -std=c11
+
+all: sum.o my_sum.o test_lib.o
+	$(GCC) *.o -o app
+
+sum.o:
+	$(GCC) -c sum.c -o sum.o
+
+my_sum.o:
+	$(GCC) -c my_sum.c -o my_sum.o
+
+test_lib.o:
+	$(GCC) -c test_lib.c -o test_lib.o
+
+clean:
+	rm -rf *.o</codebox>
+      <codebox char_offset="54" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="c" highlight_brackets="1" show_line_numbers="0">#include"sum.h"
+
+int sum(int x, int y){
+    return x + y;
+}</codebox>
+      <codebox char_offset="63" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="c" highlight_brackets="1" show_line_numbers="0">int sum(int x, int y);</codebox>
+      <codebox char_offset="75" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="c" highlight_brackets="1" show_line_numbers="0">#include"my_sum.h"
+
+int my_sum(int x, int y){
+    return x + y;
+}</codebox>
+      <codebox char_offset="87" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="c" highlight_brackets="1" show_line_numbers="0">int my_sum(int x, int y);</codebox>
+      <codebox char_offset="101" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="c" highlight_brackets="1" show_line_numbers="0">#include&lt;stdio.h&gt;
+#include"sum.h"
+#include"my_sum.h"
+
+int main(){
+    int x = 10;
+    int y = 20;
+    int s1 = 0;
+    int s2 = 0;
+
+    s1 = sum(x, y);
+    s2 = my_sum(x, y);
+
+    printf("s1 = %d\n", s1);
+    printf("s2 = %d\n", s2);
+    
+    return 0;
+}</codebox>
+    </node>
+  </node>
+  <node name="Check" unique_id="4" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1707939932" ts_lastsave="1707939937">
+    <rich_text link="webs https://ru.wikipedia.org/wiki/Check_(%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0_%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE_%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F">https://ru.wikipedia.org/wiki/Check_(%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0_%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE_%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F</rich_text>
+    <rich_text link="webs https://ru.wikipedia.org/wiki/Check_(%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0_%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE_%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)">)</rich_text>
+    <rich_text>
+
+</rich_text>
   </node>
 </cherrytree>
