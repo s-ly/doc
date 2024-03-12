@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
-  <node name="Dockerfile для Школы21" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1710094322" ts_lastsave="1710199980">
+  <node name="Dockerfile для Школы21" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1710094322" ts_lastsave="1710202294">
     <rich_text weight="heavy">Мини-Вертер:</rich_text>
     <rich_text>
 /home/sergey/C5_s21_decimal-2/materials/build
 sudo sh run.sh
 
 </rich_text>
-    <rich_text weight="heavy">Докер:</rich_text>
+    <rich_text weight="heavy">Докер (того парня):</rich_text>
     <rich_text>
+
 /project/src
 make test
 exit
@@ -17,5 +18,6 @@ sudo sh run_docker.sh
 Нужны файлы:
 Dockerfile
 run_docker.sh</rich_text>
+    <encoded_png char_offset="95" justification="left" filename="Dockerfile.zip" time="1710202332" sha256sum="19ae1959ce17e76a9249486b82b0e1672c5ca1d4bd36754e3973a3d3c5f3060c"/>
   </node>
 </cherrytree>
