@@ -41,7 +41,8 @@ Docker version:
 `docker image build -t test:latest .`
 
 Запуск web-приложения в контейнере:
-```
+
+```bash
 docker container run -d \
 --name web1 \
 --publish 8080:8080 \
