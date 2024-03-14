@@ -17,3 +17,13 @@
 <img src="file:///home/sergey/doc/s21/img/gra1.png" title="" alt="gra1.png" width="113">
 
 [Разложения e^x и sin(x) в ряды Тейлора. - YouTube](https://www.youtube.com/watch?v=p9XeWwSypd4)
+
+
+
+<img src="file:///home/sergey/doc/s21/img/image9.webp" title="" alt="image9.webp" width="245">
+
+[Как компьютер считает синусы &#8212; Журнал «Код» программирование без снобизма](https://thecode.media/sinus/)
+
+
+
+[phind_1](https://www.phind.com/agent?cache=cltrcgp2a0028l108ez6n7ukc)
