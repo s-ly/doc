@@ -14,10 +14,10 @@ http://mathprofi.ru/deistviya_s_matricami.html
 
 [GitLab matrix](https://repos.21-school.ru/students/C6_s21_matrix.ID_353530/gentrifr_student.21_school.ru/C6_s21_matrix-1/-/blob/master/README_RUS.md)
 
-
-
 <img src="img/2024-03-26%2003-52-03.png" title="" alt="2024-03-26 03-52-03.png" width="170">
 
 [Калькулятор матриц](https://programforyou.ru/calculators/calculator-matric)
 
+![math1.png](img/math1.png)
 
+https://www.math10.com/ru/vysshaya-matematika/matrix/umnozhenie-matric.html
