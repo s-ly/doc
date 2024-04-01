@@ -102,35 +102,35 @@ else
 endif
 
 all: sum.o my_sum.o test_lib.o
-	$(GCC) *.o -o app
+    $(GCC) *.o -o app
 
 sum.o:
-	$(GCC) -c sum.c -o sum.o
+    $(GCC) -c sum.c -o sum.o
 
 my_sum.o:
-	$(GCC) -c my_sum.c -o my_sum.o
+    $(GCC) -c my_sum.c -o my_sum.o
 
 test_lib.o:
-	$(GCC) -c test_lib.c -o test_lib.o
+    $(GCC) -c test_lib.c -o test_lib.o
 
 test:
-	$(GCC) --coverage $(FILES) unit_test/*.c -o test $(Flags)
-	./test
+    $(GCC) --coverage $(FILES) unit_test/*.c -o test $(Flags)
+    ./test
 
 gcov_report: test
-	./test
-	lcov -t "result" -o res.info -c -d .
-	genhtml -o report res.info
-	open report/index.html
+    ./test
+    lcov -t "result" -o res.info -c -d .
+    genhtml -o report res.info
+    open report/index.html
 
 clean:
-	rm -rf *.o
-	rm -rf *.gcno
-	rm -rf *.gcda
-	rm -rf app
-	rm -rf test
-	rm -rf report
-	rm -rf *.info
+    rm -rf *.o
+    rm -rf *.gcno
+    rm -rf *.gcda
+    rm -rf app
+    rm -rf test
+    rm -rf report
+    rm -rf *.info
 ```
 
 # Ссылки
@@ -148,6 +148,12 @@ sudo apt install check
 
 ```bash
 pkg-config --modversion check
+```
+
+Дополнительно:
+
+```bash
+sudo apt-get install lcov
 ```
 
 
