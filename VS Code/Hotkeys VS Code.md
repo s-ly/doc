@@ -1,8 +1,13 @@
 # HotKeys VS Code
+
 ## macOS
+
 ### Ссылки
+
 https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf
+
 ### Базовое редактирование
+
 Вырезать строку (без выделения) <kbd>⌘</kbd> <kbd>X</kbd>  
 Копировать строку (без выделения) <kbd>⌘</kbd> <kbd>C</kbd>  
 Переместить строку вниз/вверх <kbd>⌥</kbd> <kbd>↓/↑</kbd>  

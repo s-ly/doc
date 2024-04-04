@@ -19,5 +19,3 @@ csharp_new_line_before_open_brace = none
 Потом ставим 2 тотом снимаем галочку **Detect Indentation**
 
 Потом возвращаем галочку **Detect Indentation**
-
-
