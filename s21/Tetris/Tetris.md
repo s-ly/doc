@@ -16,7 +16,7 @@
 
 ---
 
-![nc_1.png](/home/sergey/doc/s21/Tetris/_img_Tetris/nc_1.png)
+![nc_1.png](_img_Tetris/nc_1.png)
 
 [Новые проклятия: руководство по ncurses &#x2F; Хабр](https://habr.com/ru/articles/778040/)
 
@@ -26,6 +26,6 @@ delay - не помню, но это нужно
 
 ---
 
-<img src="file:///home/sergey/doc/s21/Tetris/_img_Tetris/scr_1.png" title="" alt="scr_1.png" width="244">
+<img src="_img_Tetris/scr_1.png" title="" alt="scr_1.png" width="244">
 
 [Ncurses Tutorial 0 - Hello World (initscr, endwin, refresh, getch, printw) - YouTube](https://www.youtube.com/watch?v=lV-OPQhPvSM&list=PL2U2TQ__OrQ8jTf0_noNKtHMuYlyxQl4v&index=1)
