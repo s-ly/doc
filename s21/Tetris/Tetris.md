@@ -29,3 +29,6 @@ delay - не помню, но это нужно
 <img src="_img_Tetris/scr_1.png" title="" alt="scr_1.png" width="244">
 
 [Ncurses Tutorial 0 - Hello World (initscr, endwin, refresh, getch, printw) - YouTube](https://www.youtube.com/watch?v=lV-OPQhPvSM&list=PL2U2TQ__OrQ8jTf0_noNKtHMuYlyxQl4v&index=1)
+
+---
+[Tetris · GitHub (Чей-то)](https://github.com/amareigi/school21-Tetris/tree/main)
