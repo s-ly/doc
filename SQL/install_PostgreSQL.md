@@ -9,10 +9,12 @@
 [PostgreSQL: что это за СУБД и как с ней работать / Skillbox Media](https://skillbox.ru/media/code/postgresql-vsye-chto-nuzhno-znat-dlya-bystrogo-starta/)
 
 Проверить версию:
+
 `psql --version`
 
 Можно установить только клиент, а можно и всё целиком. Для установки целиком:
 *(Флаг -y отключает подтверждение установки)*
+
 `sudo apt update`
 `apt -y install postgresql`
 
@@ -79,5 +81,3 @@
 
 Установка pgadmin4 в виртуальную среду:
 `pip install pgadmin4`
-
-
