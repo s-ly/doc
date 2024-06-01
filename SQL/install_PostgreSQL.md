@@ -162,4 +162,12 @@
 
 ![012.png](_img_install_PostgreSQL/012.png)
 
+В общем , ещё поразбираться нужно, возможно, дополнительнного полтзователя и не нужно создавать, а достаточно установить пароль для супер-пользователя postgre:
+
+`ALTER USER postgres WITH PASSWORD 'new_password';`
+
+Примерно это выглядит так в VS Code:
+
+![013.png](_img_install_PostgreSQL/013.png)
+
 
