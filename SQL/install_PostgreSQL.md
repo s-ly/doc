@@ -103,4 +103,63 @@
 
 `pip install pgadmin4`
 
+Запуск админки в виртуальной среде Python:
+
+`pgadmin4`
+
+![004.png](_img_install_PostgreSQL/004.png)
+
+Переходим в браузер по адресу http://127.0.0.1:5050/ 
+
+![005.png](_img_install_PostgreSQL/005.png)
+
+Добавляем сервер в админке:
+
+![006.png](/home/sergey/doc/SQL/_img_install_PostgreSQL/006.png)
+
+Имя сервера админки:
+
+![007.png](/home/sergey/doc/SQL/_img_install_PostgreSQL/007.png)
+
+Параметры соединения:
+
+адрес - **localhost** (этот комп)
+
+имя пользователя - **sergey** (не админки а базы данных)
+
+пароль - **qweasd** (указывали в psql выше)
+
+![008.png](_img_install_PostgreSQL/008.png)
+
+Админка в работе:
+
+![009.png](_img_install_PostgreSQL/009.png)
+
+# Установка расширения PostgreSQL в VS Code
+
+Для подключения к базам PostgreSQL в VS Code используем расширение PostgreSQL.
+
+![010.png](_img_install_PostgreSQL/010.png)
+
+Открываем палитру команд в VS Code и вводим запрос на подключение к базе:
+`Ctrl + Shift + P`
+
+`PostgreSQL`
+
+`Add Connection`
+
+![011.png](_img_install_PostgreSQL/011.png)
+
+Потом вводим данные по порядку (показана часть):
+
+адрес - **localhost** (этот комп)
+
+имя пользователя - **sergey** (не админки а базы данных)
+
+пароль - **qweasd** (указывали в psql выше)
+
+Ещё внизу VS Code нужно выбрать базу:
+
+![012.png](_img_install_PostgreSQL/012.png)
+
 
