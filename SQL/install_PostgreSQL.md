@@ -174,4 +174,4 @@
 
 # Ещё один годный аддон для VS Code:
 
-![014.png](/home/sergey/doc/SQL/_img_install_PostgreSQL/014.png)
+![014.png](_img_install_PostgreSQL/014.png)
