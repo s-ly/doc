@@ -175,3 +175,19 @@
 # Ещё один годный аддон для VS Code:
 
 ![014.png](_img_install_PostgreSQL/014.png)
+
+# 
+
+# Подключение в s21
+
+Для подключения использую школьную, уже установленную программу:
+
+![015.png](_img_install_PostgreSQL/015.png)
+
+Щелчек по базе:
+
+![016.png](_img_install_PostgreSQL/016.png)
+
+Подключаюсь через расширение SQLTOOLS. База и пользователь gentrifr. При подключении просит пароль от gentrifr:
+
+![017.png](_img_install_PostgreSQL/017.png)
