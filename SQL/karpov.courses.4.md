@@ -149,8 +149,6 @@ SELECT NOW() - INTERVAL '1 year 2 months 1 week'
 
 `NOW` — позволяет получать текущую дату и время
 
-
-
 **Задание:**
 
 Посчитайте количество уникальных клиентов в таблице `user_actions`, сделавших за последнюю неделю хотя бы один заказ.
@@ -194,4 +192,86 @@ FROM   user_actions
 WHERE  action = 'create_order'
    and time >= (SELECT max(time)
              FROM   user_actions) - interval '1 week'
+```
+
+**Задание:**
+
+С помощью функции `AGE` и агрегирующей функции снова определите возраст самого молодого курьера мужского пола в таблице `couriers`, но в этот раз при расчётах в качестве первой даты используйте последнюю дату из таблицы `courier_actions`.
+
+Чтобы получить именно дату, перед применением функции `AGE` переведите последнюю дату из таблицы `courier_actions` в формат `DATE`, как мы делали [в этом задании](https://lab.karpov.courses/learning/152/module/1762/lesson/18484/53190/250927/).
+
+Возраст курьера измерьте количеством лет, месяцев и дней и переведите его в тип `VARCHAR`. Полученную колонку со значением возраста назовите `min_age`.
+
+Поле в результирующей таблице: `min_age`
+
+
+
+Моё решение:
+
+```sql
+with sub_request_1 as (
+  SELECT
+    max(birth_date) as max_bird_date
+  FROM
+    couriers
+  WHERE
+    sex = 'male'
+),
+sub_request_2 as (
+  SELECT
+    max(time) :: date as max_time
+  FROM
+    courier_actions
+),
+sub_request_3 as (
+  SELECT
+    age(max_time, max_bird_date) :: varchar as min_age
+  FROM
+    sub_request_1,
+    sub_request_2
+)
+SELECT
+  *
+FROM
+  sub_request_3
+```
+
+Решение курса:
+
+```sql
+SELECT
+  min(
+    age(
+      (
+        SELECT
+          max(time) :: date
+        FROM
+          courier_actions
+      ),
+      birth_date
+    )
+  ) :: varchar as min_age
+FROM
+  couriers
+WHERE
+  sex = 'male'
+```
+
+**Задание:**
+
+Из таблицы `user_actions` с помощью подзапроса или табличного выражения отберите все заказы, которые не были отменены пользователями.
+
+Выведите колонку с id этих заказов. Результат запроса отсортируйте по возрастанию id заказа.
+
+Добавьте в запрос оператор `LIMIT` и выведите только первые 1000 строк результирующей таблицы.
+
+Поле в результирующей таблице: `order_id`
+
+```sql
+SELECT order_id
+FROM   user_actions
+WHERE  order_id not in (SELECT order_id
+                        FROM   user_actions
+                        WHERE  action = 'cancel_order')
+ORDER BY order_id limit 1000
 ```
