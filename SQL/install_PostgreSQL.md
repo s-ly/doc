@@ -8,6 +8,10 @@
 
 [PostgreSQL: что это за СУБД и как с ней работать / Skillbox Media](https://skillbox.ru/media/code/postgresql-vsye-chto-nuzhno-znat-dlya-bystrogo-starta/)
 
+https://oracleplsql.ru/
+
+https://www.postgresqltutorial.com/
+
 Проверить версию:
 
 `psql --version`
