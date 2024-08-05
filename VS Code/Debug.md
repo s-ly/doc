@@ -54,3 +54,112 @@
 6. **Stop (Shift+F5)**: Останавливает текущую отладочную сессию и завершает работу отладчика. Это приведет к остановке выполнения программы, и вы вернетесь к обычному редактированию кода. Используйте эту кнопку, когда вы закончили отладку и хотите прекратить выполнение программы.
 
 Эти кнопки позволяют управлять жизненным циклом отладочной сессии, давая вам возможность быстро перезапустить тестирование или полностью остановить отладку и вернуться к разработке.
+
+# 
+
+# Пример настройки проектс С++
+
+app.cpp:
+
+```cpp
+#include <iostream>
+int main() {
+int age = 28;
+int age2 = 28;
+std::cout << "Hello " << age << std::endl;
+std::cin >> age;
+std::cout << "age new " << age << std::endl;
+age2++;
+age2++;
+return 0;
+}
+```
+
+Makefile:
+
+Флаг `-g` для отладки
+
+```makefile
+app:
+    g++ -g app.cpp -o app
+```
+
+### launch.json:
+
+Может потребоваться дать полный путь:
+`"program": "${workspaceFolder}/src/app",` // Путь к исполняемому файлу
+
+lldb - для дебагера на Мак
+
+gdb - для дебагера на Linux
+
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(lldb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/app", // Путь к исполняемому файлу
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "build" // Задача сборки перед запуском отладки
+        },
+        
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/app", // Путь к исполняемому файлу
+            "args": [], // Аргументы командной строки
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build" // Задача сборки перед запуском отладки
+        }
+    ]
+}
+
+```
+
+### tasks.json:
+
+Например для настройки цели `app` в Makefile
+
+Может потребоваться дать полный путь:
+`"command": "${workspaceFolder}/src/make app_comp",` //скрипт сборки
+
+```json
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "make app", // Или любой другой ваш скрипт сборки
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
+```
