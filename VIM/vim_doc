@@ -63,3 +63,15 @@
 Отключает совместимость с vi - set nocompatible
 Показывать строки - set number
 Отступы при выравнивании - set shiftwidth=2
+
+-----------------------------------------------------------------
+КОПИРОВАТЬ ВО ВНЕШНИЙ БУФЕР ОБМЕНА
+1. Устанавливаем плагин:
+sudo apt-get install xclip
+2. настраиваем vim в файле .vimrc:
+command! -range CopyToClipboard <line1>,<line2>w !xclip -selection clipboard
+3. В режиме ВЫДЕЛЕНИЕ вызываем команду:
+:CopyToClipboard
+
+Более просто способ - выделить мышкой и:
+ctrl + shift + c
