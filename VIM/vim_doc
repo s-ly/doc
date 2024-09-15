@@ -30,4 +30,5 @@
 Общие настройки редактора в файле /home/sergey/.vimrc
 Отключает совместимость с vi - set nocompatible
 Показывать строки - set number
-Отступы при выравнивании - set shiftwidth=2
+Ширина табуляции - set tabstop=4
+Отступы при выравнивании (для << >>)- set shiftwidth=2
